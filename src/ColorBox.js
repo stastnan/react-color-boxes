@@ -1,6 +1,5 @@
 import { useState } from "react"
 import "./ColorBox.css";
-import { paste } from "@testing-library/user-event/dist/paste";
 
 const pastelColors = [
     "#FFDFD9",
@@ -21,10 +20,11 @@ function randomChoice(arr) {
 }
 
 export default function ColorBox() {
-    const [ color, setColor ] = useState(randomChoice(pastelColors))
+    const [ color, setColor ] = useState(randomChoice(pastelColors));
 
 
-    const changeColor = ({colors}) => {
+
+    const changeColor = () => {
         const randomColor = randomChoice(pastelColors)
         setColor(randomColor);
     }
